@@ -3,7 +3,7 @@ const LinksSocialMedia = {
   youtube: 'channel/UC_bxJ3m8LA4bQUyp8PFWLqQ',
   facebook: 'Luizalabs',
   instagram: 'julio.cesararruda',
-  twitter: 'Julio_Ceesar1'
+  twitter: 'luizalabs'
 }
 
 // O fetch vai até a url e pega o seu valor. Ele não se importa com o tipo do valor. Se ele conseguir, passa o valor para o then
