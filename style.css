@@ -1,0 +1,94 @@
+/*Cascating Stylesheet
+  O elemento que entra por ultimo na cascata é o que tem mais força*/
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid; /*Serve para o place-items ficar bem alinhado ao meio*/
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg);
+  width: 375px;
+  height: 812px;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative; /*Avatar detentor do absolute cria limite no absolute do .avatar span*/
+}
+
+.avatar span {
+  position: absolute; /*Permite que a imagem fique em cima da outra*/
+  z-index: 1; /*Eixo z de profundidade 3D* | O selo será sobreposto novamente porque quando a foto pessoal foi transformada em polígono, ela se sobrepôs*/
+  top: -15px; /*Movendo o selo para cima*/
+}
+
+.avatar > img {
+  /*Sinal de > pega apenas o primeiro nível de imagem. Logo, a foto pessoal. Pois o selo está dentro do span*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /*Se adapta às proporções passadas cobrindo todo o espaço*/
+
+  clip-path: polygon(
+    50% 0,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0 75%,
+    0 25%
+  ); /*Transformar imagem em polígono*/
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem; /*rem pega a quantidade de pixels e divide por 16*/
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+  margin-top: 0.25rem;
+
+  display: flex; /*Alinhando o github ao centro*/
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
+ul {
+  margin-top: 4rem;
+  list-style: none; /*Tira os topcos da lista. (°)*/
+  padding: 0; /*Tirando o preenchimento interno da lista*/
+  display: flex; /*Deixa um elemento da lista ao lado do outro*/
+  justify-content: center; /*Alinhamento central do conteúdo do flex*/
+  gap: 0.5rem; /*Espaço entre os itens da lista*/
+}

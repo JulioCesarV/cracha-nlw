@@ -1,0 +1,78 @@
+<!-- 
+  HTML
+
+  HyperText - Hipertexto
+  É um texto com links
+
+  Markup - Marcação
+  Tags
+
+  Language - Sintaxe
+  Regras de uma linguagem
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Julio Cesar - DoWhile 2022</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- .container = Caixa para conter o conteúdo -->
+
+        <div class="avatar">
+          <!-- .avatar = Caixa para as imagens -->
+
+          <span>
+            <img src="images/selo.svg" alt="Selo Rocketseat" />
+          </span>
+          <img
+            id="userPhoto"
+            src="http://lorempixel.com.br/185/185/people"
+            alt="Foto Pessoal"
+          />
+        </div>
+        <h1 id="userName">Julio-nome</h1>
+        <a id="linkGitHub" href="https://github.com/" target="_blank">
+          <img src="images/github.svg" alt="Ícone github" />
+          <span id="userLoginGitHub">Julio-github</span></a
+        >
+        <p id="userBio">Será alterado pela bio do github</p>
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://youtube.com/" target="_blank">
+              <img src="images/youtube.svg" alt="Ícone Youtube" />
+              <!-- target="_blank" serve para abrir uma nova guia ao clicar no link -->
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="images/instagram.svg" alt="Ícone Instagram" />
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="https://facebook.com/" target="_blank">
+              <img src="images/facebook.svg" alt="Ícone Facebook" />
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="https://twitter.com/" target="_blank">
+              <img src="images/twitter.svg" alt="Ícone Twitter" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>
